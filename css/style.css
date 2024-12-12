@@ -257,7 +257,7 @@ body.dark-mode #myBtn:hover {
 .dark-mode-toggler {
     position: fixed;
     top: 80px;
-    right: 55px;
+    right: 20px;
     width: 50px;
     height: 25px;
     background-color: #ccc;
