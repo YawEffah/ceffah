@@ -1,0 +1,146 @@
+*{
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background-color: #f3f3f3;
+}
+
+.offcanvas{
+    padding: 20px;
+}
+
+.custom-navbar{
+    background-color: #f3f3f3;
+}
+
+.navbar-brand, 
+.offcanvas-title{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.navbar-brand span, 
+.offcanvas-title span{
+    font-weight: lighter;
+}
+
+.icon{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #eea302;
+}
+
+.main {
+    padding: 30px 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "about-content"
+        "profile-pic";
+    gap: 1rem; 
+    align-items: center;
+}
+
+.about-content {
+    grid-area: about-content;
+}
+
+.about-content h1{
+    font-size: 60px;
+}
+
+.quick-links{
+    gap: 20px;
+    display: flex;
+}
+
+.quick-link{
+    padding: 20px;
+    width: 100px;
+    height: 100px;
+    color: #000;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000;
+    border-radius: 50%;
+}
+
+.link-yellow{background-color: #eea302;}
+.link-red{background-color: #ff3b25;}
+.link-blue{background-color: #80d8da;}
+
+.quick-link:active,
+.quick-link:hover{
+    background-color: transparent;
+}
+
+.profile-pic {
+    grid-area: profile-pic;
+}
+
+.profile-pic img {
+    width: 100%;
+    height: auto; 
+    border-radius: 50%;
+    border: 1px solid #ccc;
+}
+
+.footer{
+    padding: 30px 20px;
+}
+
+.socials{
+    color: #000;
+    margin-right: 10px;
+}
+
+
+@media (min-width: 768px) {
+    .main {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 30px;
+        grid-template-areas: "about-content profile-pic";
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .main {
+        width: 80%;
+        margin: 0 auto;
+        grid-template-areas: "profile-pic about-content";
+    }
+
+    .about-content article{
+        width: 70%;
+    }
+
+    .footer{
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .footer h2{
+        font-size: 20px;
+    }
+
+    .quick-link{
+        width: 120px;
+        height: 120px;
+    }
+}
+
+
