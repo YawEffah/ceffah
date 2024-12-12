@@ -3,6 +3,17 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+:root {
+    --primary-bg: #f3f3f3;
+    --accent-yellow: #eea302;
+    --accent-red: #ff3b25;
+    --accent-blue: #80d8da;
+    --text-color: #000;
+    --btn-bg: #fe5b00;
+    --btn-hover-bg: #898989;
+}
+
+
 a{
     text-decoration: none;
 }
@@ -17,6 +28,7 @@ body{
 
 .custom-navbar{
     background-color: #f3f3f3;
+    border-bottom: 1px solid #ccc;
 }
 
 .navbar-brand, 
@@ -79,10 +91,20 @@ body{
 .link-red{background-color: #ff3b25;}
 .link-blue{background-color: #80d8da;}
 
-.quick-link:active,
-.quick-link:hover{
+.quick-link:hover,
+.quick-link:active {
+    transform: scale(1.1);
+    border: 2px solid var(--text-color);
+    transition: all 0.3s ease;
     background-color: transparent;
 }
+
+a:focus, .quick-link:focus {
+    outline: 2px dashed var(--accent-blue);
+    outline-offset: 4px;
+}
+
+
 
 .profile-pic {
     grid-area: profile-pic;
@@ -112,7 +134,6 @@ body{
     color: #000;
     margin-right: 10px;
 }
-
 
 #myBtn {
     display: none; 
@@ -147,6 +168,131 @@ body{
     opacity: 1;
     transform: translateY(0);
   }
+
+
+
+/* Dark mode body */
+body.dark-mode {
+    background-color: #121212; 
+    color: #e0e0e0;
+}
+
+/* Navbar */
+body.dark-mode .custom-navbar {
+    background-color: #1e1e1e;
+    border-bottom: 1px solid #333;
+}
+
+/* Dark mode styles for the navbar-toggler */
+body.dark-mode .navbar-toggler {
+    background-color: #333;
+    border: 1px solid #555;
+}
+
+/* Dark mode styles for the toggler icon */
+body.dark-mode .navbar-toggler-icon {
+    background-image: url(
+        "data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(224, 224, 224, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+
+body.dark-mode .navbar-brand,
+body.dark-mode .navbar-brand span,
+body.dark-mode .offcanvas-title span {
+    color: #e0e0e0; 
+}
+
+/* Links */
+body.dark-mode a {
+    color: #80d8da;
+}
+
+body.dark-mode a:hover {
+    color: #fe5b00;
+}
+
+/* Quick Links */
+body.dark-mode .quick-link {
+    border-color: #e0e0e0;
+    color: #e0e0e0;
+    background-color: transparent;
+}
+
+body.dark-mode .quick-link:hover {
+    background-color: #333;
+    color: #ffffff;
+}
+
+/* Footer */
+body.dark-mode .footer {
+    color: #e0e0e0;
+}
+
+body.dark-mode .socials {
+    color: #80d8da;
+}
+
+body.dark-mode .socials:hover {
+    color: #fe5b00;
+}
+
+/* Profile Picture Border */
+body.dark-mode .profile-pic img {
+    border-color: #e0e0e0;
+}
+
+/* Scroll Button */
+body.dark-mode #myBtn {
+    background: #333;
+    color: #e0e0e0;
+}
+
+body.dark-mode #myBtn:hover {
+    background-color: #555;
+}
+
+
+
+/* Dark mode toggler container */
+.dark-mode-toggler {
+    position: fixed;
+    top: 80px;
+    right: 55px;
+    width: 50px;
+    height: 25px;
+    background-color: #ccc;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, justify-content 0.3s ease;
+    z-index: 4;
+    border: none;
+}
+
+/* Circle inside the toggler */
+.toggle-circle {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+/* Dark mode styles */
+body.dark-mode .dark-mode-toggler {
+    background-color: #555;
+    justify-content: flex-end;
+}
+
+body.dark-mode .toggle-circle {
+    transform: translateX(-25px);
+    background-color: #222;
+}
+
 
 
 
