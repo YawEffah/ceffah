@@ -43,6 +43,10 @@ body{
     font-weight: lighter;
 }
 
+.nav-icon{
+    width: 25px;
+}
+
 .icon{
     width: 20px;
     height: 20px;
