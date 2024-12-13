@@ -67,8 +67,12 @@ body{
     align-items: center;
 }
 
-.about-content {
+.column-a {
     grid-area: column-a;
+}
+
+.column-b{
+    grid-area: column-b;
 }
 
 .about-content h1{
@@ -82,6 +86,7 @@ body{
 
 .quick-link{
     padding: 20px;
+
     width: 100px;
     height: 100px;
     color: #000;
@@ -110,17 +115,54 @@ a:focus, .quick-link:focus {
     outline-offset: 4px;
 }
 
-
-.profile-pic {
-    grid-area: column-b;
-}
-
 .profile-pic img {
     width: 100%;
     height: auto; 
     border-radius: 50%;
     border: 1px solid #ccc;
 }
+
+/* Contact Page Styles */
+.contact-form{
+    width: 100%;
+}
+
+.contact-icon{
+    font-size: 22px;
+}
+
+.contact-form label{
+    color: #898989;
+    margin-top: 10px;
+}
+
+.contact-form .text-field{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    color: #898989;
+    background: inherit;
+    resize: none;
+    border-bottom: 2px solid #898989;
+}
+
+.contact-form .submit-btn{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #0F2244;
+    border-radius: 10px;
+    background: #eea302;
+}
+
+.contact-form .submit-btn:hover,
+.contact-form .submit-btn:hover{
+    background: #80d8da;
+    transition: 0.5s ease;
+}
+
 
 .footer{
     padding: 30px 20px;
@@ -158,9 +200,10 @@ a:focus, .quick-link:focus {
   }
   
   #myBtn:hover {
-    background-color: #898989; /* Add a dark-grey background on hover */
+    background-color: #898989; 
     transition: 0.5s;
-  }
+}
+
 
 /* Style for scroll animation */
 .scroll-animation {
@@ -213,7 +256,7 @@ body.dark-mode a {
 }
 
 body.dark-mode a:hover {
-    color: #fe5b00;
+    color: #eea302;
 }
 
 /* Quick Links */
@@ -276,6 +319,11 @@ body.dark-mode #myBtn:hover {
     border: none;
 }
 
+.dark-mode-toggler:hover{
+    background: #80d8da;
+    transition: 0.5s ease;
+}
+
 /* Circle inside the toggler */
 .toggle-circle {
     width: 20px;
@@ -292,11 +340,15 @@ body.dark-mode .dark-mode-toggler {
     justify-content: flex-end;
 }
 
+body.dark-mode .dark-mode-toggler:hover{
+    background: #80d8da;
+    transition: 0.5s ease;
+}
+
 body.dark-mode .toggle-circle {
     transform: translateX(-25px);
     background-color: #222;
 }
-
 
 
 
