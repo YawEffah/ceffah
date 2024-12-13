@@ -61,14 +61,14 @@ body{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:
-        "about-content"
-        "profile-pic";
+        "column-a"
+        "column-b";
     gap: 1rem; 
     align-items: center;
 }
 
 .about-content {
-    grid-area: about-content;
+    grid-area: column-a;
 }
 
 .about-content h1{
@@ -111,9 +111,8 @@ a:focus, .quick-link:focus {
 }
 
 
-
 .profile-pic {
-    grid-area: profile-pic;
+    grid-area: column-b;
 }
 
 .profile-pic img {
@@ -258,7 +257,6 @@ body.dark-mode #myBtn:hover {
 }
 
 
-
 /* Dark mode toggler container */
 .dark-mode-toggler {
     position: absolute;
@@ -308,7 +306,7 @@ body.dark-mode .toggle-circle {
     .main {
         grid-template-columns: 1fr 1fr;
         grid-gap: 30px;
-        grid-template-areas: "about-content profile-pic";
+        grid-template-areas: "column-a column-b";
     }
 }
 
@@ -318,7 +316,7 @@ body.dark-mode .toggle-circle {
         width: 80%;
         margin: 0 auto;
         grid-template-columns: 1fr 1.2fr;
-        grid-template-areas: "profile-pic about-content";
+        grid-template-areas: "column-b column-a";
     }
 
     .about-content article{
