@@ -11,10 +11,12 @@
     --text-color: #000;
     --btn-bg: #fe5b00;
     --btn-hover-bg: #898989;
+    --link-color: #898989;
 }
 
 
 a{
+    color: var(--link-color);
     text-decoration: none;
 }
 
@@ -135,7 +137,7 @@ a:focus, .quick-link:focus {
 }
 
 .socials{
-    color: #000;
+    color: var(--link-color);
     margin-right: 10px;
 }
 
