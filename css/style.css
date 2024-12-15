@@ -217,8 +217,7 @@ a:focus, .quick-link:focus {
     display: inline-block;
     margin: 20px auto;
     padding: 12px 25px;
-    background-color: var(--btn-bg);
-    color: white;
+    background: #eea302;
     font-size: 1em;
     font-weight: bold;
     text-align: center;
@@ -230,7 +229,6 @@ a:focus, .quick-link:focus {
 
   .download-btn:hover,
   .download-btn:active{
-    color: white;
     transform: scale(1.05);
     background: #80d8da;
     transition: 0.5s ease;
@@ -268,12 +266,12 @@ a:focus, .quick-link:focus {
     border-top-right-radius: 50px;
     border-top-left-radius: 50px;
     font-size: 20px; 
-    background: #fe5b00; 
+    background: #eea302;
   }
   
   #myBtn:hover {
-    background-color: #898989; 
-    transition: 0.5s;
+    background: #80d8da;
+    transition: 0.5s ease;;
 }
 
 
