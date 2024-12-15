@@ -219,6 +219,7 @@ a:focus, .quick-link:focus {
     padding: 12px 25px;
     background: #eea302;
     font-size: 1em;
+    color: #000;
     font-weight: bold;
     text-align: center;
     text-decoration: none;
